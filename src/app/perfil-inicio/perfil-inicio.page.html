@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<ion-view title="Perfil inicio" id="page11" style="background-color:#99EC8E;">
+    <ion-content padding="true" class="has-header">
+        <div id="perfilInicio-container9">
+            <div id="perfilInicio-container8">
+                <ion-list id="perfilInicio-list6">
+                    <ion-item class="item-avatar" id="perfilInicio-list-item22">
+                        <h2>Nombre Apellido</h2>
+                    </ion-item>
+                </ion-list>
+            </div>
+        </div>
+        <div class="list card" id="perfilInicio-card25">
+            <a ui-sref="bSqueda()" id="perfilInicio-button25" class="button button-positive">Búsqueda</a>
+            <a ui-sref="miTerapeuta()" id="perfilInicio-button26" class="button button-positive">Mi terapeuta</a>
+            <h3 id="perfilInicio-heading4" style="color:#000000;text-align:center;">Citas del mes</h3>
+            <ion-content>
+                <ion-item>
+                    <ion-label>Selecciona la fecha</ion-label>
+                    <ion-input [(ngModel)]="todo" placeholder="insert some todo here" type="date" min="01,01,2019" max="01,12,2019" />
+                </ion-item>
+
+                <button ion-button id="perfilInicio-button27" (click)="add()" class="button button-positive">Añadir</button>
+
+                <ion-list>
+                    <ion-item-sliding ngFor="left t of todos">
+                        <ion-item>
+                            {{t}}
+                        </ion-item>
+
+                        <button ion-button id="perfilInicio-button27" (click)="add()" class="button button-positive">Eliminar</button>
+
+                    </ion-item-sliding>
+
+                </ion-list>
+            </ion-content>
+            <div style="margin: 0px; line-height: 250px; background-color: rgb(232, 235, 239); text-align: center;">
+            </div>
+            <div id="perfilInicio-button-bar2" class="button-bar"></div>
+        </div>
+        <button id="perfilInicio-button9" style="align:left width:200px font-size:15px;" class="button button-positive">Cerrar sesión</button>
+    </ion-content>
+</ion-view>
+</html>
